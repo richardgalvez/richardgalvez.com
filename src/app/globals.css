@@ -12,15 +12,44 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* TODO: Dark Mode - Make into toggle */
+/* @media (prefers-color-scheme: dark) { */
+/*   :root { */
+/*     --background: #0a0a0a; */
+/*     --foreground: #ededed; */
+/*   } */
+/* } */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(to bottom right, blue, navy);
+}
+
+@utility h1-primary {
+  @apply text-gray-900 mb-4 text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl;
+}
+
+@utility h2-primary {
+  @apply text-2xl font-bold;
+}
+
+@utility p-primary {
+  @apply mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48;
+}
+
+@utility a-link {
+  @apply underline hover:no-underline;
+}
+
+@utility box-align {
+  @apply flex min-h-screen items-center justify-center;
+}
+
+.presentation-box {
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 25px;
+  opacity: 0.9;
 }
